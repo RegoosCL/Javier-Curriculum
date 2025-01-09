@@ -1,0 +1,137 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculum - {{ personal_info.name }}</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="{% static 'css/cv.css' %}">
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <!-- Profile Header -->
+                <div class="profile-header text-center animate-on-scroll">
+                    <h1 class="display-4 mb-3">{{ personal_info.name }}</h1>
+                    <h3 class="text-light opacity-75">{{ personal_info.title }}</h3>
+                </div>
+
+                <!-- Personal Information -->
+                <div class="card shadow-sm mb-4 animate-on-scroll">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <p><i class="bi bi-calendar-fill"></i> Fecha de nacimiento: {{ personal_info.birth_date }}</p>
+                                <p><i class="bi bi-person-vcard-fill"></i> C.I: {{ personal_info.ci }}</p>
+                                <p><i class="bi bi-flag-fill"></i> Nacionalidad: {{ personal_info.nationality }}</p>
+                            </div>
+                            <div class="col-md-6">
+                                <p><i class="bi bi-heart-fill"></i> Estado civil: {{ personal_info.civil_status }}</p>
+                                <p><i class="bi bi-geo-alt-fill"></i> Dirección: {{ personal_info.address }}</p>
+                                <p><i class="bi bi-check-circle-fill"></i> Disponibilidad inmediata</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Contact Information -->
+                <div class="card shadow-sm mb-4 animate-on-scroll">
+                    <div class="card-body">
+                        <div class="row text-center contact-info">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <i class="bi bi-envelope-fill"></i>
+                                {{ personal_info.email }}
+                            </div>
+                            <div class="col-md-6">
+                                <i class="bi bi-telephone-fill"></i>
+                                {{ personal_info.phone }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile -->
+                <div class="animate-on-scroll">
+                    <h2 class="section-header">
+                        <i class="bi bi-person-fill me-2"></i>Perfil
+                    </h2>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <p class="lead mb-0">¡Hola! Soy un estudiante apasionado por la tecnología y el desarrollo de software, actualmente cursando Ingeniería en Informática. Me destaco por mi capacidad de aprender rápidamente y mi entusiasmo por crear soluciones tecnológicas innovadoras. Busco mi primera oportunidad de práctica profesional donde pueda aplicar mis conocimientos y seguir creciendo en el mundo del desarrollo de software.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div class="animate-on-scroll">
+                    <h2 class="section-header">
+                        <i class="bi bi-mortarboard-fill me-2"></i>Formación Académica
+                    </h2>
+                    <div class="education-card">
+                        <h5>INACAP, Chile - La Granja</h5>
+                        <p class="text-muted mb-1">Ingeniería en Informática (cursando 5° semestre)</p>
+                        <small class="text-primary">En curso</small>
+                    </div>
+                    <div class="education-card">
+                        <h5>Liceo Politécnico Carlos Condell</h5>
+                        <p class="text-muted mb-1">Enseñanza Media Completa</p>
+                        <small class="text-primary">1° medio a 4° medio</small>
+                    </div>
+                    <div class="education-card">
+                        <h5>Colegio Santo Tomás</h5>
+                        <p class="text-muted mb-1">Enseñanza Básica Completa</p>
+                        <small class="text-primary">1° básico a 8° básico</small>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div class="animate-on-scroll">
+                    <h2 class="section-header">
+                        <i class="bi bi-info-circle-fill me-2"></i>Información Adicional
+                    </h2>
+                    <div class="additional-info">
+                        <h5>TÉCNICO DE NIVEL MEDIO EN MECÁNICA AUTOMOTRIZ</h5>
+                        <p class="mb-0">Título obtenido</p>
+                        <small class="text-primary">2022 - 2023</small>
+                    </div>
+                </div>
+
+                <!-- Technical Skills -->
+                <div class="animate-on-scroll">
+                    <h2 class="section-header">
+                        <i class="bi bi-gear-fill me-2"></i>Habilidades Técnicas
+                    </h2>
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <div id="skillsContainer" class="text-center">
+                                {% for skill in skills %}
+                                    <span class="skill-badge">{{ skill.name }} ({{ skill.level }})</span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Languages -->
+                <div class="animate-on-scroll">
+                    <h2 class="section-header">
+                        <i class="bi bi-translate me-2"></i>Idiomas
+                    </h2>
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <span class="skill-badge">Inglés (básico)</span>
+                            <span class="skill-badge">Español (nativo)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{% static 'js/cv.js' %}"></script>
+</body>
+</html>
