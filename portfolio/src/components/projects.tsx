@@ -31,7 +31,7 @@ export default function Projects() {
             key={project.title}
             className={`relative grid md:grid-cols-2 gap-4 md:gap-8 ${index % 2 === 0 ? "" : "md:text-right"}`}
           >
-            <div className={`md:absolute inset-0 z-0 ${index % 2 === 0 ? "md:left-1/2" : "md:right-1/2"}`}>
+            <div className={`md:absolute inset-0 ${index % 2 === 0 ? "md:left-1/2" : "md:right-1/2"}`}>
               <div className="relative h-full">
                 <div className="absolute inset-0 bg-teal-300/10 mix-blend-multiply" />
                 <img
