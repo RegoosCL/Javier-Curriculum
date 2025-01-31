@@ -8,7 +8,7 @@ const projects = [
       "Proyecto desarrollado en Flask para la gestión de productos en una tienda de bicicletas. Incluye funcionalidades como CRUD de productos, autenticación de usuarios y control de stock. Evaluación del ramo 'Taller de Aplicaciones'.",
     technologies: ["Flask", "Python", "MySQL", "JavaScript", "HTML", "CSS"],
     github: "https://github.com/RegoosCL/Taller-de-aplicaciones/tree/main/proyecto_taller",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/proyect1-img.png?height=300&width=500",
   },
   {
     title: "API REST para Gestión de Datos",
@@ -16,7 +16,7 @@ const projects = [
       "Desarrollo de una API REST con Django y Django REST Framework para la gestión de datos en una aplicación. Implementa autenticación, control de permisos y manejo eficiente de solicitudes. Evaluación del ramo 'Backend'.",
     technologies: ["Django REST Framework", "Python"],
     github: "https://github.com/RegoosCL/Eva3-Backed",
-    image: "/placeholder.svg?height=300&width=500",
+    image: "/proyect2-img.png?height=300&width=500",
   },
 ];
 
@@ -66,6 +66,9 @@ export default function Projects() {
             </div>
           </div>
         ))}
+      </div>
+      <div className="flex justify-center mt-8">
+        <p className="text-teal-300 font-mono text-sm mb-2">Todo fue contruido en mi localhost</p>
       </div>
     </section>
   )
