@@ -30,7 +30,7 @@ export default function About() {
         <div className="relative group">
           <div className="relative z-10">
             <img
-              src="/placeholder.svg?height=300&width=300"
+              src="/Pica-enhance-20250131013903.PNG?height=300&width=300"
               alt="Portrait"
               className="rounded grayscale hover:grayscale-0 transition-all"
             />
