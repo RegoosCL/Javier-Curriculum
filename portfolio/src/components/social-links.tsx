@@ -10,7 +10,7 @@ export default function SocialLinks() {
   ]
 
   return (
-    <div className="fixed left-4 bottom-0 hidden xl:flex flex-col items-center gap-6 after:content-[''] after:w-[1px] after:h-32 after:bg-gray-400">
+    <div className="fixed bottom-0 left-0 right-0 bg-gray-900 p-3 flex justify-center gap-6 xl:left-4 xl:bottom-0 xl:flex-col xl:bg-transparent xl:p-0">
       {socialLinks.map(({ icon: Icon, href, label }) => (
         <Button
           key={label}
@@ -20,7 +20,7 @@ export default function SocialLinks() {
           asChild
         >
           <a href={href} target="_blank" rel="noopener noreferrer">
-            <Icon className="h-5 w-5" />
+            <Icon className="h-6 w-6" />
             <span className="sr-only">{label}</span>
           </a>
         </Button>
