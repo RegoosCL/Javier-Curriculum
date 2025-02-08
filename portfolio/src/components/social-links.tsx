@@ -31,7 +31,7 @@ export default function SocialLinks() {
 
       
       <div className="xl:hidden">
-        <div className="sticky bottom-0 left-0 right-0 bg-gray-900 p-3 flex justify-center gap-6">
+        <div className="sticky bottom-0 left-0 right-0 p-3 flex justify-center gap-6 bg-transparent">
           {socialLinks.map(({ icon: Icon, href, label }) => (
             <Button
               key={label}
