@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ParticlesBackground from "./ParticlesBackground";
 import dynamic from "next/dynamic";
+import { motion } from "framer-motion";
 
 
 const Typewriter = dynamic(
@@ -18,7 +19,12 @@ export default function Hero() {
       <div className="relative z-10">
         <p className="text-teal-300 font-mono mb-5">Curriculum de Javier Poblete</p>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-blue-500 to-purple-600 mb-4">
+        <motion.h1 
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-blue-500 to-purple-600 mb-4"
+        >
           <Typewriter
             words={["Javier Poblete.", "Desarrollador Web.", "Ingeniero Informático."]}
             loop={0}
@@ -28,7 +34,8 @@ export default function Hero() {
             deleteSpeed={50}
             delaySpeed={1500}
           />
-        </h1>
+        </motion.h1>
+
 
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-400 mb-8">
           Estudiante de Inacap.
