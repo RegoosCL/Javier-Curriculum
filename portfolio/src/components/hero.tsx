@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button"
-import { ArrowRight } from "lucide-react"
-import ParticlesBackground from "./ParticlesBackground"
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
+import ParticlesBackground from "./ParticlesBackground";
+import { Typewriter } from "react-simple-typewriter";
 
 export default function Hero() {
   return (
@@ -8,7 +9,19 @@ export default function Hero() {
       <ParticlesBackground />
       <div className="relative z-10">
         <p className="text-teal-300 font-mono mb-5">Curriculum de Javier Poblete</p>
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-200 mb-4">Javier Poblete.</h1>
+        
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-200 mb-4">
+          <Typewriter
+            words={["Javier Poblete.", "Desarrollador Web.", "Ingeniero Informático."]}
+            loop={0}
+            cursor
+            cursorStyle="|"
+            typeSpeed={80}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />
+        </h1>
+
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-400 mb-8">
           Estudiante de Inacap.
         </h2>
@@ -25,4 +38,3 @@ export default function Hero() {
     </section>
   );
 }
-
