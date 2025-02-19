@@ -1,7 +1,15 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import ParticlesBackground from "./ParticlesBackground";
-import { Typewriter } from "react-simple-typewriter";
+import dynamic from "next/dynamic";
+
+
+const Typewriter = dynamic(
+  () => import("react-simple-typewriter").then((mod) => mod.Typewriter),
+  { ssr: false }
+);
 
 export default function Hero() {
   return (
@@ -9,7 +17,7 @@ export default function Hero() {
       <ParticlesBackground />
       <div className="relative z-10">
         <p className="text-teal-300 font-mono mb-5">Curriculum de Javier Poblete</p>
-        
+
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-200 mb-4">
           <Typewriter
             words={["Javier Poblete.", "Desarrollador Web.", "Ingeniero Informático."]}
