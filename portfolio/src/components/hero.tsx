@@ -28,8 +28,7 @@ export default function Hero() {
         <Button 
           variant="outline" 
           className="w-fit text-teal-300 border-teal-300 hover:bg-teal-300/10"
-          onClick={handleDownload}
-        >
+          onClick={handleDownload}>
           Download CV
           <Download className="ml-2 h-4 w-4" />
         </Button>
