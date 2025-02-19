@@ -3,16 +3,6 @@ import { ArrowRight } from "lucide-react"
 import ParticlesBackground from "./ParticlesBackground"
 
 export default function Hero() {
-  const handleDownload = () => {
-    
-    const link = document.createElement('a')
-    link.href = '/Curriculum Vitae Javier Poblete.pdf'
-    link.download = 'JavierPoblete-CV.pdf'
-    document.body.appendChild(link)
-    link.click()
-    document.body.removeChild(link)
-  }
-  
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
       <ParticlesBackground />
@@ -23,14 +13,16 @@ export default function Hero() {
           Estudiante de Inacap.
         </h2>
         <p className="max-w-xl text-gray-400 text-lg mb-12">
-          Soy estudiante de inacap y lo que estoy estudiando es ingenieria en informatica.
+          Soy estudiante de Inacap y lo que estoy estudiando es Ingeniería en Informática.
         </p>
-        <Button variant="outline" className="w-fit text-teal-300 border-teal-300 hover:bg-teal-300/10"
-            onClick={handleDownload}>
+        <a href="/cv-javier-poblete.pdf" download>
+          <Button variant="outline" className="w-fit text-teal-300 border-teal-300 hover:bg-teal-300/10">
             Download CV
-            <Download className="ml-2 h-4 w-4" />
-        </Button>
+            <ArrowRight className="ml-2 h-4 w-4" />
+          </Button>
+        </a>
       </div>
     </section>
-  )
+  );
 }
+
