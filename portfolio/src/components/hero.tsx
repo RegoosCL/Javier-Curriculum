@@ -3,6 +3,16 @@ import { ArrowRight } from "lucide-react"
 import ParticlesBackground from "./ParticlesBackground"
 
 export default function Hero() {
+  const handleDownload = () => {
+    
+    const link = document.createElement('a')
+    link.href = '/Curriculum Vitae Javier Poblete.pdf'
+    link.download = 'JavierPoblete-CV.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+  
   return (
     <section className="relative min-h-[90vh] flex flex-col justify-center overflow-hidden">
       <ParticlesBackground />
