@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   useEffect(() => {
     const playClickSound = () => {
-      const audio = new Audio("/click.mp3"); // Asegúrate de que el archivo esté en /public
+      const audio = new Audio("/click.mp3");
       audio.play();
       audio.volume = 0.3
     };
