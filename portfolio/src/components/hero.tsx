@@ -20,7 +20,7 @@ export default function Hero() {
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-200 mb-4">
           <Typewriter
-            words={["Javier Poblete.", "Desarrollador Web.", "Ingeniero Informático."]}
+            words={["Javier Poblete.", "Javier Poblete.", "Javier Poblete."]}
             loop={0}
             cursor
             cursorStyle="|"
