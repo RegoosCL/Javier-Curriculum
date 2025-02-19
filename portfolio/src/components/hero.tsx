@@ -25,12 +25,10 @@ export default function Hero() {
         <p className="max-w-xl text-gray-400 text-lg mb-12">
           Soy estudiante de inacap y lo que estoy estudiando es ingenieria en informatica.
         </p>
-        <Button 
-          variant="outline" 
-          className="w-fit text-teal-300 border-teal-300 hover:bg-teal-300/10"
-          onClick={handleDownload}>
-          Download CV
-          <Download className="ml-2 h-4 w-4" />
+        <Button variant="outline" className="w-fit text-teal-300 border-teal-300 hover:bg-teal-300/10"
+            onClick={handleDownload}>
+            Download CV
+            <Download className="ml-2 h-4 w-4" />
         </Button>
       </div>
     </section>
