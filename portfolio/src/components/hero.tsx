@@ -18,9 +18,9 @@ export default function Hero() {
       <div className="relative z-10">
         <p className="text-teal-300 font-mono mb-5">Curriculum de Javier Poblete</p>
 
-        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-gray-200 mb-4">
+        <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-teal-300 via-blue-500 to-purple-600 mb-4">
           <Typewriter
-            words={["Javier Poblete.", "Javier Poblete.", "Javier Poblete."]}
+            words={["Javier Poblete.", "Desarrollador Web.", "Ingeniero Informático."]}
             loop={0}
             cursor
             cursorStyle="|"
