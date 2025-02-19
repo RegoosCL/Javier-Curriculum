@@ -1,24 +1,37 @@
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
-import type React from "react" // Import React
+"use client"; 
 
-const inter = Inter({ subsets: ["latin"] })
+import { Inter } from "next/font/google";
+import { useEffect } from "react";
+import "./globals.css";
+import type React from "react"; 
 
-export const metadata: Metadata = {
-  title: "Portfolio",
-  description: "Personal portfolio website",
-}
+const inter = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
+  useEffect(() => {
+    const playClickSound = () => {
+      const audio = new Audio("/click.mp3"); // Asegúrate de que el archivo esté en /public
+      audio.play();
+      audio.volume = 0.3
+    };
+    
+
+    document.addEventListener("click", playClickSound);
+
+    return () => {
+      document.removeEventListener("click", playClickSound);
+    };
+  }, []);
+
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-[#0a192f] text-gray-300`}>{children}</body>
+      <body className={`${inter.className} bg-[#0a192f] text-gray-300`}>
+        {children}
+      </body>
     </html>
-  )
+  );
 }
-
