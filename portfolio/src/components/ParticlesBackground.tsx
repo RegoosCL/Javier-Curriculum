@@ -24,7 +24,7 @@ export default function ParticlesBackground() {
         interactivity: {
           events: {
             onClick: {
-              enable: false,
+              enable: true,
               mode: "push",
             },
             onHover: {
